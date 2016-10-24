@@ -7,8 +7,13 @@ body {
   color: #555;
   font-size: 12px;
 }
+body a {
+  text-decoration: none;
+  background-color: #fff;
+}
 body .main-container {
   width: 100%;
+  height: 100%;
 }
 body .main-container .top-pic {
   width: 100%;
@@ -51,7 +56,7 @@ body .main-container .people-cotainer .people-box .left-part {
 }
 body .main-container .people-cotainer .people-box .left-part .people-pic {
   width: 85%;
-  height: 9em;
+  height: 10em;
   margin: 2em auto 0;
   overflow: hidden;
 }
@@ -70,14 +75,18 @@ body .main-container .people-cotainer .people-box .left-part .vote-button {
   color: #fff;
   font-size: 1.1em;
   border-radius: 0.3em;
-  text-decoration:none;
 }
 body .main-container .people-cotainer .people-box .left-part .vote-result {
   width: 85%;
   height: 2em;
+  font-size: 1.2em;
   line-height: 2em;
   text-align: center;
-  margin: 1em auto 0;
+  margin: 0.8em auto 0;
+}
+body .main-container .people-cotainer .people-box .left-part .vote-result .getVoteNum {
+  color: #e89104;
+  font-size: 1.5em;
 }
 body .main-container .people-cotainer .people-box .right-part {
   width: 45%;
@@ -90,6 +99,87 @@ body .main-container .people-cotainer .people-box .right-part .people-name {
   vertical-align: top;
   color: #e89104;
   font-size: 1.2em;
+}
+body .main-container .login-bg {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(../images/login_bg.png);
+  background-size: cover;
+}
+body .main-container .login-bg .login-logo {
+  width: 100%;
+  height: 10em;
+  line-height: 10em;
+  text-align: center;
+}
+body .main-container .login-bg .login-logo img {
+  width: 50%;
+}
+body .main-container .login-bg .login-title {
+  width: 100%;
+  height: 6em;
+  margin-top: 2em;
+  line-height: 4em;
+  text-align: center;
+}
+body .main-container .login-bg .login-title img {
+  width: 60%;
+}
+body .main-container .login-bg .input-cantainer {
+  width: 75%;
+  height: 8.8em;
+  margin: 1em auto 2em;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.5em;
+  padding: 0 1em 1em;
+}
+body .main-container .login-bg .input-cantainer .input-box {
+  width: 100%;
+  height: 4.5em;
+  padding: 1em 0 1.5em;
+  position: relative;
+  box-sizing: border-box;
+}
+body .main-container .login-bg .input-cantainer .input-box .icon-box {
+  width: 2.5em;
+  height: 2.5em;
+  position: absolute;
+  left: 0.5em;
+  top: 1.2em;
+}
+body .main-container .login-bg .input-cantainer .input-box .icon-box img {
+  width: 2.5em;
+  height: 2.5em;
+}
+body .main-container .login-bg .input-cantainer .input-box input {
+  width: 100%;
+  height: 2.2em;
+  line-height: 2.2em;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  text-indent: 3.2em;
+  font-size: 1.3em;
+  color: #fff;
+  outline: none;
+}
+body .main-container .login-bg .login-button {
+  display: block;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  height: 2.4em;
+  line-height: 2.4em;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 1.5em;
+  background-color: #ffa00a;
+  border-radius: 0.5em;
 }
 body .sure-modal {
   width: 76%;
@@ -140,12 +230,40 @@ body .sure-modal .modal-button-box .cancel-button {
   color: #ffa00a;
   font-size: 1.2em;
 }
+body .error-modal {
+  width: 14em;
+  height: 8.62em;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 0.3em;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -4.3em;
+  margin-left: -7em;
+  z-index: 3;
+  border: 1px solid #1d1c1c;
+}
+body .error-modal .modal-title {
+  height: 4.5em;
+  line-height: 5.5em;
+  font-size: 1.2em;
+  border-bottom: 1px solid #ccc;
+}
+body .error-modal .error-button {
+  display: block;
+  width: 100%;
+  height: 2.5em;
+  line-height: 2.5em;
+  font-size: 1.2em;
+  color: #000;
+}
 body .all-mask {
   position: fixed;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   background-color: #000;
   z-index: 2;
 }
@@ -154,4 +272,20 @@ body .hide {
 }
 .no-move {
   overflow: hidden;
+}
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #fff;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #fff;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #fff;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #fff;
 }

@@ -6,7 +6,7 @@ var vote = new Object();
 
 vote.click = function(){
 //    点击投票按钮和模态框确认按钮样式变化
-    vote.touch('.vote-button,.sure-button','#e89104','#ffa00a');
+    vote.touch('.vote-button,.sure-button,.login-button','#e89104','#ffa00a');
 //    点击投票按钮弹出模态框
     $(document).on('click','.vote-button',function(){
         vote.view('.all-mask',0.6);
@@ -15,10 +15,10 @@ vote.click = function(){
     })
     
 //    点击模态框关闭按钮样式变化
-    vote.touch('.cancel-button','#f5f5f5','#fff');
+    vote.touch('.cancel-button,.error-button','#f5f5f5','#fff');
 //    点击模态框关闭按钮模态框和遮罩层消失
-    $(document).on('click','.cancel-button',function(){
-        $('.sure-modal,.all-mask').addClass('hide');
+    $(document).on('click','.cancel-button,.error-button',function(){
+        $('.sure-modal,.error-modal,.all-mask').addClass('hide');
         $(document.body).removeClass('no-move');
     })
 }

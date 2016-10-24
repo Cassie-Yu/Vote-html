@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, user-scalable=0, minimal-ui">
+    <title>“最美员工”投票页面</title>
+    
+    <link rel="stylesheet" href="../css/vote.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="login-bg">
+            <div class="login-logo">
+                <img src="../images/login_logo.png" alt="login-logo">
+            </div>
+            <div class="login-title">
+                <img src="../images/login_title.png" alt="login-title;">
+            </div>
+            
+            <form id="login-form" action="javascript:login.login()">
+                <div class="input-cantainer">                
+                    <div class="input-box">
+                        <div class="icon-box">
+                            <img src="../images/icon_name.png" alt="icon-name">
+                        </div>
+                        <input id="userName" name="useName" class="useName" type="text" placeholder="用户名">
+                    </div>
+                    <div class="input-box">
+                        <div class="icon-box">
+                            <img src="../images/icon_password.png" alt="icon-name">
+                        </div>
+                        <input id="passWord" name="passWord" class="passWord" type="password" placeholder="密码">
+                    </div>
+                </div>
+                <input type="submit" class="login-button" value="登 录">      
+            </form>
+        </div>
+    </div>
+    
+    
+    <!--登录错误模态框-->
+    <div class="error-modal hide">
+        <div class="modal-title">
+            用户名或密码错误
+        </div>
+        <a class="error-button">取消</a>
+    </div>
+    
+    <div class="all-mask hide"></div>
+    
+    <script src='../libs/js/jquery.min.js'></script> 
+<!--    <script src="./libs/js/bootstrap.min.js"></script>   -->
+    <script src="../js/vote.js"></script>
+    <script src="../js/login.js"></script>
+    
+</body>
+</html>
