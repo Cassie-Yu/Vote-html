@@ -34,7 +34,7 @@ body .main-container .title-text .title-pic img {
 body .main-container .title-text .text-content {
   width: 78%;
   margin: 0 auto;
-  margin-top: -6em;
+  margin-top: -22%;
 }
 body .main-container .people-cotainer {
   width: 90%;
@@ -56,7 +56,7 @@ body .main-container .people-cotainer .people-box .left-part {
 }
 body .main-container .people-cotainer .people-box .left-part .people-pic {
   width: 85%;
-  height: 10em;
+  height: 2%;
   margin: 2em auto 0;
   overflow: hidden;
 }
@@ -70,7 +70,7 @@ body .main-container .people-cotainer .people-box .left-part .vote-button {
   height: 2em;
   line-height: 2em;
   text-align: center;
-  margin: 1em auto 0;
+  margin: 0.6em auto;
   background-color: #ffa00a;
   color: #fff;
   font-size: 1.1em;
@@ -82,7 +82,7 @@ body .main-container .people-cotainer .people-box .left-part .vote-result {
   font-size: 1.2em;
   line-height: 2em;
   text-align: center;
-  margin: 0.8em auto 0;
+  margin: 0.6em auto;
 }
 body .main-container .people-cotainer .people-box .left-part .vote-result .getVoteNum {
   color: #e89104;
@@ -113,48 +113,36 @@ body .main-container .login-bg {
 }
 body .main-container .login-bg .login-logo {
   width: 100%;
-  height: 10em;
-  line-height: 10em;
+  height: 16%;
+  box-sizing: border-box;
+  padding-top: 6%;
   text-align: center;
 }
 body .main-container .login-bg .login-logo img {
-  width: 50%;
+  width: 45%;
 }
 body .main-container .login-bg .login-title {
   width: 100%;
-  height: 6em;
-  margin-top: 2em;
-  line-height: 4em;
+  height: 12%;
   text-align: center;
 }
 body .main-container .login-bg .login-title img {
-  width: 60%;
+  width: 55%;
 }
 body .main-container .login-bg .input-cantainer {
   width: 75%;
-  height: 8.8em;
-  margin: 1em auto 2em;
+  height: 18.5%;
+  margin: 1% auto 4%;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 0.5em;
   padding: 0 1em 1em;
 }
 body .main-container .login-bg .input-cantainer .input-box {
   width: 100%;
-  height: 4.5em;
-  padding: 1em 0 1.5em;
+  height: 5em;
+  padding: 1em 0 1.2em;
   position: relative;
   box-sizing: border-box;
-}
-body .main-container .login-bg .input-cantainer .input-box .icon-box {
-  width: 2.5em;
-  height: 2.5em;
-  position: absolute;
-  left: 0.5em;
-  top: 1.2em;
-}
-body .main-container .login-bg .input-cantainer .input-box .icon-box img {
-  width: 2.5em;
-  height: 2.5em;
 }
 body .main-container .login-bg .input-cantainer .input-box input {
   width: 100%;
@@ -167,32 +155,43 @@ body .main-container .login-bg .input-cantainer .input-box input {
   color: #fff;
   outline: none;
 }
+body .main-container .login-bg .input-cantainer .input-box .icon-box {
+  width: 2.5em;
+  height: 2.5em;
+  position: absolute;
+  left: 0.5em;
+  top: 1.2em;
+}
+body .main-container .login-bg .input-cantainer .input-box .icon-box img {
+  width: 2.5em;
+  height: 2.5em;
+}
 body .main-container .login-bg .login-button {
   display: block;
   width: 80%;
-  text-align: center;
-  margin: 0 auto;
   height: 2.4em;
   line-height: 2.4em;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #ffa00a;
   color: #fff;
   border: none;
   outline: none;
   font-size: 1.5em;
-  background-color: #ffa00a;
   border-radius: 0.5em;
 }
 body .sure-modal {
   width: 76%;
-  height: 16em;
+  height: 31%;
   background-color: #fff;
   border-radius: 0.3em;
   position: fixed;
   top: 50%;
   left: 50%;
-  margin-top: -8em;
+  margin-top: -16%;
   margin-left: -38%;
   z-index: 3;
-  border: 1px solid #1d1c1c;
+  border: 1px solid #c0c0c0;
 }
 body .sure-modal .modal-top {
   width: 100%;
@@ -231,18 +230,19 @@ body .sure-modal .modal-button-box .cancel-button {
   font-size: 1.2em;
 }
 body .error-modal {
-  width: 14em;
-  height: 8.62em;
+  width: 78%;
+  height: inhert;
   text-align: center;
   background-color: #fff;
-  border-radius: 0.3em;
+  border-radius: 0.5em;
   position: fixed;
   top: 50%;
   left: 50%;
-  margin-top: -4.3em;
-  margin-left: -7em;
+  margin-top: -38%;
+  margin-left: -39.5%;
   z-index: 3;
-  border: 1px solid #1d1c1c;
+  border: 1px solid #c0c0c0;
+  color: #666;
 }
 body .error-modal .modal-title {
   height: 4.5em;
@@ -253,10 +253,12 @@ body .error-modal .modal-title {
 body .error-modal .error-button {
   display: block;
   width: 100%;
-  height: 2.5em;
-  line-height: 2.5em;
+  height: 3em;
+  line-height: 3em;
   font-size: 1.2em;
-  color: #000;
+  color: #666;
+  background-color: #fff;
+  border-radius: 0 0 0.5em 0.5em;
 }
 body .all-mask {
   position: fixed;
@@ -288,4 +290,7 @@ body .hide {
 :-ms-input-placeholder {
   /* Internet Explorer 10+ */
   color: #fff;
+}
+input[type="submit"] {
+  -webkit-appearance: none;
 }
