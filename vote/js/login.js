@@ -11,8 +11,8 @@ $(function(){
 var login = new Object();
 
 login.iconChange = function(){
-    login.focusOrblur('.useName','./images/icon_name_curr.png','./images/icon_name.png');
-    login.focusOrblur('.passWord','./images/icon_password_curr.png','./images/icon_password.png'); 
+    login.focusOrblur('.useName','../images/icon_name_curr.png','../images/icon_name.png');
+    login.focusOrblur('.passWord','../images/icon_password_curr.png','../images/icon_password.png'); 
     $(document).on('click','.login-button',function(){
     	$('.login-logo,.login-title').animate({'margin-top':0});
     	$('#login-form').animate({'margin-top':0});
