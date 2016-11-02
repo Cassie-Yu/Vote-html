@@ -1,37 +1,55 @@
+var windowHeight;
+var windowChangeHeight;
+
 $(function(){
+	windowHeight = $(window).innerHeight();
     login.iconChange();
+    login.keyBoard();
+    $('input:eq(0)').focus(); 
 })
 
 var login = new Object();
 
 login.iconChange = function(){
-    login.focusOrblur('.useName','../images/icon_name_curr.png','../images/icon_name.png');
-    login.focusOrblur('.passWord','../images/icon_password_curr.png','../images/icon_password.png');  
+    login.focusOrblur('.useName','./images/icon_name_curr.png','./images/icon_name.png');
+    login.focusOrblur('.passWord','./images/icon_password_curr.png','./images/icon_password.png'); 
+    $(document).on('click','.login-button',function(){
+    	$('.login-logo,.login-title').animate({'margin-top':0});
+    	$('#login-form').animate({'margin-top':0});
+    })
 }
 
 login.login = function(){
     var userName = $("#userName").val();
 	var passWord = $("#passWord").val();
-//    var Url ;
+    var Url = "./tologin";
     
     if(login.checkUserName(userName)&&login.checkPassWord(passWord)){
         console.log('表单提交到后台!')
-//        $.ajax({
-//            url: Url,
-//            type: 'POST',
-//            dataType: "json",
-//            data: {
-//                userName: userName,
-//                passWord: passWord,
-//            },
-//            async: false,
-//            success: function(data) {
-//                console.log('success!');
-//            },
-//            error: function() {
-//                console.log('error!');
-//            }
-//        });
+        $.ajax({
+            url: Url,
+            type: 'POST',
+            dataType: "json",
+            data: {
+            	username: userName,
+            	password: passWord,
+            },
+            async: false,
+            success: function(data) {14%
+            	console.log("data"+data);
+                console.log('success!');
+                if(1 == data.result){
+                	window.location.href="./base";
+                }else{
+                	vote.view('.all-mask',0.6);
+                    vote.view('.error-modal',1);
+                }
+            },
+            error: function() {
+                console.log('error!');
+                window.document.location.href="./login";
+            }
+        });
     }else{
         vote.view('.all-mask',0.6);
         vote.view('.error-modal',1);
@@ -50,9 +68,7 @@ login.focusOrblur = function(target,url1,url2){
     })
     $(document).on('blur',target,function(){
         $(this).siblings('.icon-box').children('img').attr('src',url2);
-        if(login.isNull($(this).val())){
-            $(this).parents('.input-box').removeAttr('style');    
-        }
+        $(this).parents('.input-box').removeAttr('style');    
     })
 }
 
@@ -71,4 +87,19 @@ login.checkPassWord = function(){
 //判断是否为空
 login.isNull = function(str) {
 	return str == '' || str == undefined || str == NaN ? true : false;
+}
+
+login.keyBoard = function(){
+    $(window).resize(function(){
+    	windowChangeHeight = $(window).innerHeight();
+    	keyHeight = windowHeight - windowChangeHeight;
+//        console.log(Height);
+    	if(keyHeight>0){
+    		$('.login-logo,.login-title').animate({'margin-top':-keyHeight/3});
+    		$('#login-form').animate({'margin-top':keyHeight/2});
+        }else{
+        	$('.login-logo,.login-title').animate({'margin-top':0});
+        	$('#login-form').animate({'margin-top':0});
+        }
+    })
 }
