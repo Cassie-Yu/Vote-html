@@ -32,8 +32,8 @@ body .main-container .production-container {
   margin-left: -600px;
 }
 body .main-container .production-container .production-box {
-  width: 220px;
-  padding: 15px 6px;
+  width: 240px;
+  padding: 15px 30px;
   float: left;
 }
 body .main-container .production-container .production-box .production-pic {
